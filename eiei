@@ -1,0 +1,1111 @@
+-- bypass tp
+if game:GetService("Players").LocalPlayer.Character.Services:FindFirstChild("Client") then
+    game:GetService("Players").LocalPlayer.Character.Services["Client"].Disabled = true
+end
+
+-- bypass chair
+for i,v in pairs(game:GetDescendants()) do
+    if v:IsA("Seat") then
+       v.CFrame = CFrame.new(1000,1000,1000)
+    end
+end
+
+local oldGravity = game:GetService("Workspace").Gravity
+if true then
+    game:GetService("Workspace").Gravity = 0
+else
+    game:GetService("Workspace").Gravity = oldGravity
+end
+
+
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+local GUI = Mercury:Create{
+    Name = "FREE KUB HUB",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/rayrei0112/Lua"
+}
+
+
+
+local Tab = GUI:Tab{
+	Name = "Autofarm",
+	Icon = "rbxassetid://7529398102" 
+}
+
+if _G.Autofarm == nil then
+    _G.Autofarm = false 
+end
+
+if _G.Autoredeem == nil then
+    _G.Autoredeem = false 
+end
+
+_G.Autofarm = false 
+_G.Autoredeem = true
+
+
+if game.PlaceId == 4520749081 then
+    oldworld = true
+elseif game.PlaceId == 6381829480 then
+    newworld = true
+end
+if oldworld then
+    spawn(function()
+        while true do wait(.2)
+        if _G.Autoredeem == true then
+            function UseCode(Text)
+                game:GetService("ReplicatedStorage").Remotes.Functions.redeemcode:InvokeServer(Text)
+            end
+            UseCode("1MFAV")
+            UseCode("Update3_17")
+            UseCode("Peodiz")
+            UseCode("DinoxLive")
+            UseCode("THXFOR1BVISIT")
+        end
+        end
+    end)
+end
+
+if oldworld then
+    spawn(function()
+        while true do
+            wait()
+            if _G.Autoredeem == true then
+                local Lv = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+                if Lv == 1 then
+                    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Katana") then
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("None"))
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2011.95068359375, 48.1442985534668, -1758.2510986328125)
+                        wait(.5)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                        wait(.2)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Size = UDim2.new(5000, 5000, 5000, 5000)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Position = UDim2.new(0, -700, 0, -700)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                    end
+                elseif Lv >= 600 then
+                    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Pipe") then
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("None"))
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5888.1572265625, 12.215917587280273, 3577.043212890625)
+                        wait(.5)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                        wait(.2)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Size = UDim2.new(5000, 5000, 5000, 5000)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Position = UDim2.new(0, -700, 0, -700)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                    end
+                elseif Lv >= 1700 then
+                    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Mini Mace") then
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("None"))
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6733.62744, 310.193512, 1306.54126, 0.86898458, 0, 0.494839221, 0, 1, 0, -0.494839221, 0, 0.86898458)
+                        wait(.5)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                        wait(.2)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Size = UDim2.new(5000, 5000, 5000, 5000)
+                        game:GetService("Players").LocalPlayer.PlayerGui.SwordShop.Dialogue.Accept.Position = UDim2.new(0, -700, 0, -700)
+                        game:GetService'VirtualUser':CaptureController()
+                        game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                    end
+                end    
+            end
+        end
+    end)
+end
+
+
+
+function checklevel()
+    local LV = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+    if oldworld then
+        if LV == 1 or LV <= 9 then
+            Mon = "Soldier [Lv. 1]"
+            QuestUIName = "QuestLvl1"
+            CFramemon = CFrame.new(2316.306640625, 48.186008453369, -1504.4581298828)
+            QuestPosition = CFrame.new(2240, 48, -1611)
+        elseif LV == 10 or LV <= 19 then
+            Mon = "Clown Pirate [Lv. 10]"
+            QuestUIName = "QuestLvl10"
+            CFramemon = CFrame.new(2476.9572753906, 48.186008453369, -1627.4058837891)
+            QuestPosition = CFrame.new(2369.8601074219, 48.136528015137, -1629.2344970703)
+        elseif LV == 20 or LV <= 29 then
+            Mon = "Smoky [Lv. 20]"
+            QuestUIName = "QuestLvl20"
+            CFramemon = CFrame.new(2330.6674804688, 48.192783355713, -1786.2180175781)
+            QuestPosition = CFrame.new(2292.1186523438, 48.261177062988, -1742.8590087891)
+        elseif LV == 30 or LV <= 49 then
+            Mon = "Tashi [Lv. 30]"
+            QuestUIName = "QuestLvl30"
+            CFramemon = CFrame.new(2006.9069824219, 48.261177062988, -1821.9404296875)
+            QuestPosition = CFrame.new(2007.1245117188, 48.176250457764, -1823.4598388672)
+        elseif LV == 50 or LV <= 74 then
+            Mon = "Clown Pirate [Lv. 50]"
+            QuestUIName = "QuestLvl50"
+            CFramemon = CFrame.new(3527.5070800781, 37.794143676758, -674.26153564453)
+            QuestPosition = CFrame.new(3518.9597167969, 37.912017822266, -593.41357421875)
+        elseif LV == 75 or LV <= 144 then
+            Mon = "The Clown [Lv. 75]"
+            QuestUIName = "QuestLvl75"
+            CFramemon = CFrame.new(3795.4990234375, 68.823883056641, -660.93676757812)
+            QuestPosition = CFrame.new(3814.0732421875, 68.866317749023, -603.93756103516)
+        elseif LV == 145 or LV <= 179 then
+            Mon = "Axe-Hand [Lv. 145]"
+            QuestUIName = "QuestLvl145"
+            CFramemon = CFrame.new(1903.9919433594, 68.630561828613, 391.69100952148)
+            QuestPosition = CFrame.new(1743.1629638672, 68.72477722168, 346.42318725586)
+        elseif LV == 180 or LV <= 199 then
+            Mon = "Fishman [Lv. 180]"
+            QuestUIName = "QuestLvl180"
+            CFramemon = CFrame.new(3324.7529296875, 10.54194355011, 1526.2847900391)
+            QuestPosition = CFrame.new(3233.3679199219, 10.609860420227, 1514.5001220703)
+        elseif LV == 200 or LV <= 229 then ------
+            Mon = "Karate Fishman [Lv. 200]"
+            QuestUIName = "QuestLvl200"
+            CFramemon = CFrame.new(3465.8513183594, 10.54194355011, 1614.5141601562)
+            QuestPosition = CFrame.new(3566.0500488281, 10.605340957642, 1548.2878417969)
+        elseif LV == 230 or LV <= 249 then
+            Mon = "SharkMan [Lv. 230]"
+            QuestUIName = "QuestLvl230"
+            CFramemon = CFrame.new(3732.4060058594, 10.465918540955, 1565.767578125)
+            QuestPosition = CFrame.new(3650.9475097656, 10.609861373901, 1513.7586669922)
+        elseif LV == 250 or LV <= 299 then
+            Mon = "Trainer Chef [Lv. 250]"
+            QuestUIName = "QuestLvl250"
+            CFramemon = CFrame.new(67.931541442871, 12.940350532532, -140.24461364746)
+            QuestPosition = CFrame.new(-52.417373657227, 49.854972839355, -87.594055175781)
+        elseif LV == 300 or LV <= 349 then
+            Mon = "Dark Leg [Lv. 300]"
+            QuestUIName = "QuestLvl300"
+            CFramemon = CFrame.new(67.931541442871, 12.940350532532, -140.24461364746)
+            QuestPosition = CFrame.new(40.126708984375, 99.629081726074, -48.459011077881)
+        elseif LV == 350 or LV <= 399 then
+            Mon = "Weapon Man [Lv. 350]"
+            QuestUIName = "QuestLvl350"
+            CFramemon = CFrame.new(-66.569305419922, 12.940350532532, 162.4741973877)
+            QuestPosition = CFrame.new(-43.856781005859, 49.879360198975, 116.77165985107)
+        elseif LV == 400 or LV <= 449 then
+            Mon = "Snow Soldier [Lv. 400]"
+            QuestUIName = "QuestLvl400"
+            CFramemon = CFrame.new(-1237.8125, 18.104755401611, 1629.8839111328)
+            QuestPosition = CFrame.new(-1258.849609375, 18.407556533813, 1541.0111083984)
+        elseif LV == 450 or LV <= 499 then
+            Mon = "King Snow [Lv. 450]"
+            QuestUIName = "QuestLvl450"
+            CFramemon = CFrame.new(-1300.1522216797, 18.111381530762, 1255.5584716797)
+            QuestPosition = CFrame.new(-1334.2113037109, 18.407556533813, 1409.0709228516)
+        elseif LV == 500 or LV <= 524 then  -----
+            Mon = "Heavy Man [Lv. 500]"
+            QuestUIName = "QuestLvl500"
+            CFramemon = CFrame.new(-1050.6512451172, 13.264945983887, 1811.7612304688)
+            QuestPosition = CFrame.new(-1097.6218261719, 18.190624237061, 1786.3248291016)
+        elseif LV == 525 or LV <= 624 then
+            Mon = "Candle Man [Lv. 525]"
+            QuestUIName = "QuestLvl525"
+            CFramemon = CFrame.new(1540.6636962891, 12.874243736267, 2142.9594726562)
+            QuestPosition = CFrame.new(1473.9732666016, 13.420497894287, 2289.4738769531)
+        elseif LV == 625 or LV <= 724 then
+            Mon = "Bomb Man [Lv. 625]"
+            QuestUIName = "QuestLvl625"
+            CFramemon = CFrame.new(1331.4616699219, 12.925869941711, 1930.4071044922)
+            QuestPosition = CFrame.new(1260.9050292969, 12.959170341492, 2080.1420898438)
+        elseif LV == 725 or LV <= 849 then
+            Mon = "King of Sand [Lv. 725]"
+            QuestUIName = "QuestLvl725"
+            CFramemon = CFrame.new(1134.8441162109, 92.372047424316, 2354.9309082031)
+            QuestPosition = CFrame.new(1253.7111816406, 43.097541809082, 2185.9108886719)
+        elseif LV == 850 or LV <= 899 then
+            Mon = "Ball Man [Lv. 850]"
+            QuestUIName = "QuestLvl850"
+            CFramemon = CFrame.new(229.5178527832, 386.45370483398, 4135.1762695312)
+            QuestPosition = CFrame.new(155.00588989258, 386.53845214844, 4089.73828125)
+        elseif LV == 900 or LV <= 999 then
+            Mon = "Rumble Man [Lv. 900]"
+            QuestUIName = "QuestLvl900"
+            CFramemon = CFrame.new(88.736030578613, 386.45370483398, 4339.4423828125)
+            QuestPosition = CFrame.new(112.48242950439, 386.53854370117, 4222.5107421875)
+        elseif LV == 1000 or LV <= 1099 then
+            Mon = "Soldier [Lv. 1000]"
+            QuestUIName = "QuestLvl1000"
+            CFramemon = CFrame.new(6100.7583007812, 11.887778282166, 3684.9794921875)
+            QuestPosition = CFrame.new(5956.1069335938, 11.964762687683, 3606.3225097656)
+        elseif LV == 1100 or LV <= 1149 then
+            Mon = "Leader [Lv. 1100]"
+            QuestUIName = "QuestLvl1100"
+            CFramemon = CFrame.new(6082.2094726562, 11.854827880859, 3541.2797851562)
+            QuestPosition = CFrame.new(5943.3486328125, 12.11235332489, 3551.8044433594)
+        elseif LV == 1150 or LV <= 1249 then
+            Mon = "Pasta [Lv. 1150]"
+            QuestUIName = "QuestLvl1150"
+            CFramemon = CFrame.new(5649.9052734375, 11.854826927185, 4016.0354003906)
+            QuestPosition = CFrame.new(5743.1215820312, 11.964762687683, 3867.6645507812)
+        elseif LV == 1250 or LV <= 1324 then
+            Mon = "Wolf [Lv. 1250]"
+            QuestUIName = "QuestLvl1250"
+            CFramemon = CFrame.new(2874.2702636719, 13.080321311951, 5108.452148437)
+            QuestPosition = CFrame.new(2955.9538574219, 13.148707389832, 5056.7749023438)
+        elseif LV == 1325 or LV <= 1399 then
+            Mon = "Giraffe [Lv. 1325]"
+            QuestUIName = "QuestLvl1325"
+            CFramemon = CFrame.new(3136.8256835938, 13.080320358276, 5105.03125)
+            QuestPosition = CFrame.new(3013.6145019531, 13.148707389832, 5102.1704101562)
+        elseif LV == 1400 or LV <= 1499 then
+            Mon = "Leo [Lv. 1400]"
+            QuestUIName = "QuestLvl1400"
+            CFramemon = CFrame.new(3043.4291992188, 13.011065483093, 5795.7319335938)
+            QuestPosition = CFrame.new(3086.5866699219, 13.079157829285, 5731.1215820312)
+        elseif LV == 1500 or LV <= 1599 then
+            Mon = "Zombie [Lv. 1500]"
+            QuestUIName = "QuestLvl1500"
+            CFramemon = CFrame.new(1453.208984375, 39.123420715332, 6997.78515625)
+            QuestPosition = CFrame.new(1468.1291503906, 15.869101524353, 6972.1948242188)
+        elseif LV == 1600 or LV <= 1749 then
+            Mon = "Shadow Master [Lv. 1600]"
+            QuestUIName = "QuestLvl1600"
+            CFramemon = CFrame.new(1374.4698486328, 19.987091064453, 7144.177734375)
+            QuestPosition = CFrame.new(1408.3360595703, 19.71842956543, 7119.650390625)
+        elseif LV == 1750 or LV <= 1799 then
+            Mon = "New World Pirate [Lv. 1750]"
+            QuestUIName = "QuestLvl1750"
+            CFramemon = CFrame.new(6521.4194335938, 49.60506439209, 1141.7388916016)
+            QuestPosition = CFrame.new(6626.9418945312, 49.699989318848, 1099.7573242188)
+        elseif LV == 1800 or LV <= 1849 then
+            Mon = "Rear Admiral [Lv. 1800]"
+            QuestUIName = "QuestLvl1800"
+            CFramemon = CFrame.new(6479.5405273438, 49.601097106934, 703.17297363281)
+            QuestPosition = CFrame.new(6608.6025390625, 49.69596862793, 714.8515625)
+        elseif LV == 1850 or LV <= 1924 then
+            Mon = "True Karate Fishman [Lv. 1850]"
+            QuestUIName = "QuestLvl1850"
+            CFramemon = CFrame.new(6487.7075195312, 49.60311126709, 1005.1995239258)
+            QuestPosition = CFrame.new(6581.7280273438, 49.692977905273, 828.48175048828)
+        elseif LV == 1925 or LV <= 1999 then
+            Mon = "Quake Woman [Lv. 1925]"
+            QuestUIName = "QuestLvl1925"
+            CFramemon = CFrame.new(6190.1455078125, 3.0408697128296, 965.89807128906)
+            QuestPosition = CFrame.new(6267.5024414062, 49.717372894287, 761.65484619141)
+        elseif LV == 2000 or LV <= 2049 then
+            Mon = "Fishman [Lv. 2000]"
+            QuestUIName = "QuestLvl2000"
+            CFramemon = CFrame.new(2415.7900390625, 58.575016021729, 9039.837890625)
+            QuestPosition = CFrame.new(2463.1315917969, 40.378562927246, 8890.46875)
+        elseif LV == 2050 or LV <= 2099 then
+            Mon = "Combat Fishman [Lv. 2050]"
+            QuestUIName = "QuestLvl2050"
+            CFramemon = CFrame.new(2415.7900390625, 58.575016021729, 9039.837890625)
+            QuestPosition = CFrame.new(2274.5266113281, 40.366134643555, 9157.484375)
+        elseif LV == 2100 or LV <= 2199 then
+            Mon = "Sword Fishman [Lv. 2100]"
+            QuestUIName = "QuestLvl2100"
+            CFramemon = CFrame.new(2415.7900390625, 58.575016021729, 9039.837890625)
+            QuestPosition = CFrame.new(2789.4912109375, 40.392894744873, 9333.79296875)
+        elseif LV >= 2200 then
+            Mon = "Seasoned Fishman [Lv. 2200]"
+            QuestUIName = "QuestLvl2200"
+            CFramemon = CFrame.new(2406.7294921875, 40.273025512695, 9360.9443359375)
+            QuestPosition = CFrame.new(2278.7944335938, 40.393733978271, 9359.361328125)
+        end
+    end
+    if newworld then
+        if LV == 2250 or LV <= 2299 then
+            Mon = "Beast Pirate [Lv. 2250]"
+            QuestUIName = "QuestLvl2250"
+            CFramemon = CFrame.new(3382.538818359375, 57.358543395996094, 154.6185760498047)
+            QuestPosition = CFrame.new(3443.224609375, 57.343746185302734, 202.864990234375)
+        elseif LV == 2300 or LV <= 2349 then
+            Mon = "Beast Pirate [Lv. 2300]"
+            QuestUIName = "QuestLvl2300"
+            CFramemon = CFrame.new(3229.41796875, 98.44204711914062, -226.39813232421875)
+            QuestPosition = CFrame.new(3071.9453125, 98.4085464477539, -227.1905059814453)
+        elseif LV == 2350 or LV <= 2399 then
+            Mon = "Snake Man [Lv. 2350]"
+            QuestUIName = "QuestLvl2350"
+            CFramemon = CFrame.new(2939.734130859375, 57.34795379638672, 254.51422119140625)
+            QuestPosition = CFrame.new(2878.932373046875, 57.34375762939453, 210.9672393798828)
+        elseif LV == 2400 or LV <= 2449 then
+            Mon = "Bandit Beast Pirate [Lv. 2400]"
+            QuestUIName = "QuestLvl2400"
+            CFramemon = CFrame.new(2816.086669921875, 135.853515625, -892.6736450195312)
+            QuestPosition = CFrame.new(2766.522216796875, 135.85128784179688, -850.982177734375)
+        elseif LV == 2450 or LV <= 2499 then
+            Mon = "Powerful Beast Pirate [Lv. 2450]"
+            QuestUIName = "QuestLvl2450"
+            CFramemon = CFrame.new(2678.121826171875, 135.87350463867188, -739.843505859375)
+            QuestPosition = CFrame.new(2729.01416015625, 135.8924560546875, -787.392333984375)
+        elseif LV == 2500 or LV <= 2549 then
+            Mon = "Violet Samurai [Lv. 2500]"
+            QuestUIName = "QuestLvl2500"
+            CFramemon = CFrame.new(2161.656494140625, 85.63526916503906, -846.8380737304688)
+            QuestPosition = CFrame.new(2106.35791015625, 85.36114501953125, -813.2427978515625)
+        elseif LV == 2550 or LV <= 2599 then
+            Mon = "Rabbit Man [Lv. 2550]"
+            QuestUIName = "QuestLvl2550"
+            CFramemon = CFrame.new(1799.6748046875, 99.79983520507812, -142.25811767578125)
+            QuestPosition = CFrame.new(1882.872314453125, 99.74776458740234, -41.73821258544922)
+        elseif LV == 2600 or LV <= 2649 then
+            Mon = "Bat Man [Lv. 2600]"
+            QuestUIName = "QuestLvl2600"
+            CFramemon = CFrame.new(2341.1923828125, 57.34795379638672, -2.5571236610412598)
+            QuestPosition = CFrame.new(2306.781005859375, 57.29374313354492, 124.85055541992188)
+        elseif LV == 2650 or LV <= 2699 then
+            Mon = "Kitsune Samurai [Lv. 2650]"
+            QuestUIName = "QuestLvl2650"
+            CFramemon = CFrame.new(1845.85693359375, 100.21739959716797, 172.3936767578125)
+            QuestPosition = CFrame.new(2019.0948486328125, 99.74776458740234, 259.51104736328125)
+        elseif LV == 2700 or LV <= 2749 then
+            Mon = "Elite Beast Pirate [Lv. 2700]"
+            QuestUIName = "QuestLvl2700"
+            CFramemon = CFrame.new(2682.069580078125, 29.214406967163086, 1227.8819580078125)
+            QuestPosition = CFrame.new(2560.884521484375, 29.214406967163086, 1235.7078857421875)
+        elseif LV == 2750 or LV <= 2799 then
+            Mon = "Elite Beast Pirate [Lv. 2750]"
+            QuestUIName = "QuestLvl2750"
+            CFramemon = CFrame.new(2774.261962890625, 29.21441078186035, 946.218017578125)
+            QuestPosition = CFrame.new(2612.58837890625, 29.21441078186035, 1024.8653564453125)
+        elseif LV == 2800 or LV <= 2849 then
+            Mon = "Bear Man [Lv. 2800]"
+            QuestUIName = "QuestLvl2800"
+            CFramemon = CFrame.new(3185.613525390625, 29.214406967163086, 1236.89892578125)
+            QuestPosition = CFrame.new(3108.916015625, 29.21441078186035, 1369.2991943359375)
+        elseif LV == 2850 or LV <= 2899 then
+            Mon = "Magician [Lv. 2850]"
+            QuestUIName = "QuestLvl2850"
+            CFramemon = CFrame.new(1920.6944580078125, 57.343746185302734, 1218.574462890625)
+            QuestPosition = CFrame.new(1795.4217529296875, 57.29374313354492, 1035.3172607421875)
+        elseif LV == 2900 or LV <= 2949 then
+            Mon = "Pachy Woman [Lv. 2900]"
+            QuestUIName = "QuestLvl2900"
+            CFramemon = CFrame.new(1653.19921875, 57.343746185302734, 1295.7296142578125)
+            QuestPosition = CFrame.new(1775.2606201171875, 57.29374313354492, 1278.7637939453125)
+        elseif LV == 2950 or LV <= 2999 then
+            Mon = "Kappa [Lv. 2950]"
+            QuestUIName = "QuestLvl2950"
+            CFramemon = CFrame.new(2418.279541015625, 61.77983856201172, 2020.6524658203125)
+            QuestPosition = CFrame.new(2184.30126953125, 57.3437614440918, 1961.7701416015625)
+        elseif LV == 3000 or LV <= 3024 then
+            Mon = "Mammoth Man [Lv. 3000]"
+            QuestUIName = "QuestLvl3000"
+            CFramemon = CFrame.new(2115.212646484375, 59.523433685302734, 2075.140380859375)
+            QuestPosition = CFrame.new(2138.514892578125, 57.3437614440918, 1957.2843017578125)
+        elseif LV == 3025 or LV <= 3074 then
+            Mon = "Skull Pirate [Lv. 3050]"
+            QuestUIName = "QuestLvl3025"
+            CFramemon = CFrame.new(982.0866088867188, 57.76540756225586, 7080.78271484375)
+            QuestPosition = CFrame.new(1114.2298583984375, 57.71523666381836, 6966.00927734375)
+        elseif LV == 3075 or LV <= 3099 then
+            Mon = "Elite Skeleton [Lv. 3100]"
+            QuestUIName = "QuestLvl3075"
+            CFramemon = CFrame.new(1328.828125, 117.0790023803711, 7290.76220703125)
+            QuestPosition = CFrame.new(1256.404541015625, 57.75295639038086, 7061.60498046875)
+        elseif LV == 3100 or LV <= 3124 then
+            Mon = "Desert Thief [Lv.3125]"
+            QuestUIName = "QuestLvl3100"
+            CFramemon = CFrame.new(8765.88671875, 14.47343921661377, 1685.7847900390625)
+            QuestPosition = CFrame.new(8845.3447265625, 14.393640518188477, 1401.0155029296875)
+        elseif LV == 3125 or LV <= 3149 then
+            Mon = "Anubis [Lv.3150]"
+            QuestUIName = "QuestLvl3125"
+            CFramemon = CFrame.new(9449.7490234375, 14.467646598815918, 1049.989013671875)
+            QuestPosition = CFrame.new(9140.7509765625, 14.393640518188477, 1057.4765625)
+        elseif LV == 3150 or LV <= 3199 then
+            Mon = "Pharaoh [Lv.3175]"
+            QuestUIName = "QuestLvl3175"
+            CFramemon = CFrame.new(9325.154296875, 48.8353157043457, 1787.2337646484375)
+            QuestPosition = CFrame.new(9551.80859375, 14.394594192504883, 1545.6085205078125)
+        elseif LV == 3200 or LV <= 3224 then
+            Mon = "Chess Soldier [Lv. 3200]"
+            QuestUIName = "QuestLvl3200"
+            CFramemon = CFrame.new(7021.04443359375, 28.587791442871094, 8053.6162109375)
+            QuestPosition = CFrame.new(6875.755859375, 28.6292667388916, 7953.830078125)
+        elseif LV >= 3225 then
+            Mon = "Sunken Vessel [Lv.3225]"
+            QuestUIName = "QuestLvl3220"
+            CFramemon = CFrame.new(6379.923828125, 29.14337730407715, 8308.0322265625)
+            QuestPosition = CFrame.new(6432.10888671875, 28.629261016845703, 7981.9716796875)
+        end
+    end
+end
+checklevel()
+
+
+
+
+spawn(function()
+    while true do
+        wait()
+        if _G.Autofarm == true then
+            for i,v in pairs(game:GetService("Players").LocalPlayer.Inventory:GetChildren()) do
+                if v.Name == "Jitter" then
+                    game:GetService("ReplicatedStorage").Remotes.Functions.InventoryEq:InvokeServer("Jitter")
+                else
+                    if not  game:GetService("Players").LocalPlayer.Inventory:FindFirstChild("Jitter") then
+                       repeat wait(.1)
+                        pcall(function()
+                        local level = game:GetService("Players").LocalPlayer.PlayerStats.lvl.Value
+                        if level >= 20 then
+                            if game:GetService("Workspace").Monster.Boss:FindFirstChild("Smoky [Lv. 20]") then
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Monster.Boss:FindFirstChild("Smoky [Lv. 20]").HumanoidRootPart.CFrame *  CFrame.new(0,8,0) * CFrame.Angles(math.rad(180),0,0)
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                                game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                            else
+                               game:GetService("ReplicatedStorage").Remotes.Functions.InventoryEq:InvokeServer("Jitter")
+                            end
+                        end
+                    end)
+                    wait()
+                    until game:GetService("Players").LocalPlayer.Inventory:FindFirstChild("Jitter")
+                    end
+                end
+            end    
+        end
+    end
+end)
+
+
+
+Tab:Toggle{
+	Name = "AutoFarm",
+	StartingState = false,
+	Callback = function(bool)
+        checklevel()
+        wait(.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFramemon
+        wait(.3)
+        _G.Autofarm = bool
+    end
+}
+
+Tab:Toggle{
+	Name = "Autoredeem",
+	StartingState = true,
+	Callback = function(bool)
+        _G.Autoredeem = bool
+    end
+}
+
+
+spawn(function()
+    while true do
+        wait()
+        if _G.Autofarm == true then
+        function equipeweapontype()
+            pcall(function()
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("Tool") and v.ToolTip == _G.WeaponType then
+                        return
+                    end
+                end
+                function getweapionname()
+                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v:IsA("Tool") and v.ToolTip ==  _G.WeaponType then
+                            return v.Name   
+                        end
+                    end
+                    return "NotFound"
+                end
+                local ResToolname = getweapionname()
+                if ResToolname == "NotFound" then
+                   
+                else
+                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild(ResToolname))
+                end
+            end)
+        end
+_G.WeaponType = "Sword"
+    end
+end
+end)
+
+function getquest()
+    checklevel()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = QuestPosition
+    game:GetService'VirtualUser':CaptureController()
+    game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+    game:GetService("Players").LocalPlayer.PlayerGui[QuestUIName].Dialogue.Accept.Size = UDim2.new(5000, 5000, 5000, 5000)
+    game:GetService("Players").LocalPlayer.PlayerGui[QuestUIName].Dialogue.Accept.Position = UDim2.new(0, -700, 0, -700)
+    game:GetService'VirtualUser':CaptureController()
+    game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+end
+
+
+
+spawn(function()
+while true do 
+    wait()
+pcall(function()
+    if _G.Autofarm then
+    checklevel()
+        if game:GetService("Players").LocalPlayer.PlayerGui.Quest.QuestBoard.Visible then
+            if game:GetService("Workspace").Monster.Mon:FindFirstChild(Mon) then
+            for i,v in pairs(game:GetService("Workspace").Monster.Mon:GetChildren()) do
+                if v.Name == Mon and v.Humanoid.Health > 0 then 
+                    equipeweapontype()
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame *  CFrame.new(0,8,0) * CFrame.Angles(math.rad(180),0,0)
+                    game:GetService'VirtualUser':CaptureController()
+                    game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                end 
+            end
+            elseif
+                game:GetService("Workspace").Monster.Boss:FindFirstChild(Mon) then
+                    for i,v in pairs(game:GetService("Workspace").Monster.Boss:GetChildren()) do
+                        if v.Name == Mon and v.Humanoid.Health > 0 then 
+                            equipeweapontype()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame *  CFrame.new(0,8,0) * CFrame.Angles(math.rad(180),0,0)
+                            game:GetService'VirtualUser':CaptureController()
+                            game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                        end 
+                    end
+                else
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFramemon
+                end
+        else
+    pcall(function()
+        getquest() 
+        end)
+        end
+    end
+    end)
+end
+end)
+
+
+
+
+spawn(function()
+while  wait(.2) do
+    local busohee = game.Players.LocalPlayer.PlayerStats.BusoShopValue.Value
+    if  _G.Autofarm == true  then
+        pcall(function()
+            if game.Players.LocalPlayer.Character.Haki.Value == 0 then
+                game:GetService("Players").LocalPlayer.Character.Services.Client.Armament:FireServer()
+            end
+        end)
+    end
+end
+end)
+
+Tab:Toggle{
+	Name = "Auto pick sword",
+	StartingState = false,
+	Callback = function(bool)
+        _G.Autosword = bool
+    end
+}
+
+if _G.Autosword == nil then
+    _G.Autosword = false
+end
+
+_G.Autosword = false
+spawn(function()
+    while true do
+        wait()
+        if _G.Autosword == true then
+            for i,v in pairs(game:GetService("Players").LocalPlayer.Inventory:GetChildren()) do
+                if v.Name == "Jitter" then
+                    game:GetService("ReplicatedStorage").Remotes.Functions.InventoryEq:InvokeServer("Jitter")
+                end
+            end
+        end
+    end
+end)
+
+if _G.AutonewW == nil then
+    _G.AutonewW = false 
+end
+
+_G.AutonewW = false
+
+spawn(function()
+    while true do
+        wait()
+        if _G.AutonewW == true then
+        function equipeweapontype()
+            pcall(function()
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("Tool") and v.ToolTip == _G.WeaponType then
+                        return
+                    end
+                end
+                
+                function getweapionname()
+                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                        if v:IsA("Tool") and v.ToolTip ==  _G.WeaponType then
+                            return v.Name   
+                        end
+                    end
+                    return "NotFound"
+                end
+                local ResToolname = getweapionname()
+                if ResToolname == "NotFound" then
+                   
+                else
+                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild(ResToolname))
+                end
+            end)
+        end
+_G.WeaponType = "Sword"
+    end
+end
+end)
+
+spawn(function()
+    while true do
+        wait()
+        if _G.AutonewW == true then
+            function checkcango()
+                NW_AlreadyGetQuest = false
+                repeat 
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1797, 17, -1473)
+                    wait()
+                    game:GetService("ReplicatedStorage").Remotes.Functions.CheckQuest:InvokeServer(workspace.AntiTPNPC:WaitForChild("Elite Pirate"))
+                until game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Elite Pirate")
+                local UI =game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Elite Pirate")
+                wait(0.5)
+                local waitmeplease = UI.Dialogue.TextFrame.Line001.Container:WaitForChild("Group005")
+                if UI.Dialogue.TextFrame.Line001.Container.Group005.Text == "not" then
+                    return "CANTGO"
+                else
+                    for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                        if v.Name == "Dialogue" then
+                            v.Accept.Size = UDim2.new(0, 10000, 0, 10000)
+                            v.Accept.Position = UDim2.new(-2, 0, -5, 0)
+                            v.Accept.ImageTransparency = 1
+                        end
+                    end
+                    wait(0.1)
+                    game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                    game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                    return "LETGO"
+                end
+            end
+        end
+    end
+end)
+
+
+if oldworld then
+    spawn(function()
+        while true do 
+            wait()
+            if _G.AutonewW == true then
+            local Check = checkcango()
+            if Check == "LETGO" then
+                -- LET'S GO!! :D
+            elseif Check == "CANTGO" then
+                wait(0.5)
+                for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                    if v.Name == "Dialogue" then
+                        v.Decline.Size = UDim2.new(0, 10000, 0, 10000)
+                        v.Decline.Position = UDim2.new(-2, 0, -5, 0)
+                    end
+                end
+                wait(0.5)
+                game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                wait(2)
+                if game:GetService("Players").LocalPlayer.Character.Services:FindFirstChild("Client") then
+                    game:GetService("Players").LocalPlayer.Character.Services["Client"].Disabled = true
+                end
+                
+                repeat
+                    wait()
+                if game:GetService("Players").LocalPlayer.PlayerGui.Quest.QuestBoard.Visible then
+                    if game:GetService("Players").LocalPlayer.PlayerGui.Quest.QuestBoard["exp"].Text ~= "Exp 16.5K" then
+                        for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Quest:GetDescendants()) do
+                            if v.Name == "Close" then
+                                v.Size = UDim2.new(0, 10000, 0, 10000)
+                                v.Position = UDim2.new(-2, 0, -5, 0)
+                            end
+                        end
+                        wait(0.5)
+                        game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                        game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                    else
+                        for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Quest:GetDescendants()) do
+                            if v.Name == "Close" then
+                                v.Size = UDim2.new(0, 0, 0, 0)
+                                v.Position = UDim2.new(-2, 0, -5, 0)
+                            end
+                        end
+                    end
+                    -- kill boss 
+                    repeat
+                        pcall(function()
+                            if game:GetService("Workspace").Monster.Boss:FindFirstChild("Seasoned Fishman [Lv. 2200]") then
+                                NW_AlreadyGetQuest = true
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Monster.Boss:FindFirstChild("Seasoned Fishman [Lv. 2200]").HumanoidRootPart.CFrame *  CFrame.new(0,8,0) * CFrame.Angles(math.rad(180),0,0)
+                                equipeweapontype()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                                game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                            else
+                                NW_AlreadyGetQuest = true
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2388, 114, 9451)
+                            end
+                        end)
+                        wait()
+                    until game.Players.LocalPlayer.Backpack:FindFirstChild("Map") or game.Players.LocalPlayer.Backpack:FindFirstChild("Map") or _G.AutoNewWorld == false
+                    if game.Players.LocalPlayer.Backpack:FindFirstChild("Map") or game.Players.LocalPlayer.Backpack:FindFirstChild("Map") then
+                        repeat 
+                            pcall(function()
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6807.26953125, 211.3367767334, 1078.6049804688)
+                                wait()
+                                game:GetService("ReplicatedStorage").Remotes.Functions.CheckQuest:InvokeServer(workspace.AntiTPNPC:WaitForChild("Traveler"))
+                            end)
+                        until game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Traveler") or _G.AutoNewWorld == false
+                        local UI = game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Traveler")
+                        wait(0.5)
+                        local waitmeplease = UI.Dialogue.TextFrame.Line001.Container:WaitForChild("Group005")
+                        for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                            if v.Name == "Dialogue" then
+                                v.Accept.Size = UDim2.new(0, 10000, 0, 10000)
+                                v.Accept.Position = UDim2.new(-2, 0, -5, 0)
+                                v.Accept.ImageTransparency = 1
+                            end
+                        end
+                        wait(0.1)
+                        game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                        game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                    end
+                    -- kill boss
+                else
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6807, 211, 1080)
+                    wait(1)
+                    game:GetService("ReplicatedStorage").Remotes.Functions.CheckQuest:InvokeServer(workspace.AntiTPNPC.Traveler)
+                    wait(0.1)
+                    local UI = game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Traveler")
+                    wait(1)
+                    for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                        if v.Name == "Dialogue" then
+                            v.Accept.Size = UDim2.new(0, 10000, 0, 10000)
+                            v.Accept.Position = UDim2.new(-2, 0, -5, 0)
+                            v.Accept.ImageTransparency = 1
+                        end
+                    end
+                    wait(0.1)
+                    game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                    game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                end
+                until _G.AutoNewWorld == false
+                if game.Players.LocalPlayer.Backpack:FindFirstChild("Map")  then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6807.26953125, 211.3367767334, 1078.6049804688)
+                    game:GetService'VirtualUser':CaptureController()
+                    game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                    game:GetService("Players").LocalPlayer.PlayerGui.Traveler.Dialogue.Accept.Size = UDim2.new(5000, 5000, 5000, 5000)
+                    game:GetService("Players").LocalPlayer.PlayerGui.Traveler.Dialogue.Accept.Position = UDim2.new(0, -700, 0, -700)
+                    game:GetService'VirtualUser':CaptureController()
+                    game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+                end
+            end
+            end
+        end
+    end)
+end
+
+Tab:Toggle{
+	Name = "Auto New World",
+	StartingState = false,
+	Callback = function(bool)
+        _G.AutonewW = bool
+    end
+}
+
+
+
+
+local Tab = GUI:Tab{
+	Name = "AutoUpStats",
+	Icon = "rbxassetid://7040410130"
+}
+
+_G.automelee = false
+_G.autodefense = false 
+_G.autosword = false
+_G.autofruit = false
+
+Tab:Toggle{
+	Name = "Melee",
+	StartingState = false,
+	Description = nil,
+	Callback = function(stat)
+	    _G.automelee = stat
+	end
+}
+
+Tab:Toggle{
+	Name = "Defense",
+	StartingState = false,
+	Description = nil,
+	Callback = function(stat)
+	    _G.autodefense = stat
+	end
+}
+
+Tab:Toggle{
+	Name = "Sword",
+	StartingState = false,
+	Description = nil,
+	Callback = function(stat)
+	    _G.autosword = stat
+	end
+}
+
+Tab:Toggle{
+	Name = "Fruit",
+	StartingState = false,
+	Description = nil,
+	Callback = function(stat)
+	    _G.autofruit = stat
+	end
+}
+
+task.spawn(function()
+    while true do 
+        wait()
+pcall(function()
+        if _G.automelee == true then
+            game.Players.LocalPlayer.PlayerGui.Stats.Button.StatsFrame.RemoteEvent:FireServer("Melee", 1)
+        end
+        if _G.autodefense == true then
+            game.Players.LocalPlayer.PlayerGui.Stats.Button.StatsFrame.RemoteEvent:FireServer("Defense", 1)
+        end
+        if _G.autosword == true then
+            game.Players.LocalPlayer.PlayerGui.Stats.Button.StatsFrame.RemoteEvent:FireServer("Sword", 1)
+        end
+        if _G.autofruit == true then
+            game.Players.LocalPlayer.PlayerGui.Stats.Button.StatsFrame.RemoteEvent:FireServer("Devil Fruit", 1)
+        end
+    end)
+    end
+end)
+
+local Tab = GUI:Tab{
+	Name = "Island",
+	Icon = "rbxassetid://7536159850"
+}
+
+if oldworld then
+Tab:Button{
+    Name = "Tp to NewWorld",
+    Callback = function() 
+        while true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1796.72265625, 16.176036834716797, -1474.58935546875)
+            wait(.5)
+            local args = {
+                [1] = workspace.AntiTPNPC:FindFirstChild("Elite Pirate")
+            }
+            game:GetService("ReplicatedStorage").Remotes.Functions.CheckQuest:InvokeServer(unpack(args))
+            if game:GetService("Players").LocalPlayer.PlayerGui["Elite Pirate"].Dialogue.Accept.Visible == true then
+                game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                wait(.1)
+                for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                    if v.Name == "Dialogue" then
+                        v.Accept.Size = UDim2.new(0, 10000, 0, 10000)
+                        v.Accept.Position = UDim2.new(-2, 0, -5, 0)
+                        v.Accept.ImageTransparency = 1
+                    end
+                end
+            end 
+        end
+    end
+}
+end
+
+
+if newworld then
+Tab:Button{
+    Name = "Tp to OldWorld",
+    Callback = function() 
+        while true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3948.25146484375, 16.744665145874023, 324.00750732421875)
+            wait(.5)
+            local args = {
+                [1] = workspace.AntiTPNPC:FindFirstChild("Elite Pirate")
+            }
+            game:GetService("ReplicatedStorage").Remotes.Functions.CheckQuest:InvokeServer(unpack(args))
+            if game:GetService("Players").LocalPlayer.PlayerGui["Elite Pirate"].Dialogue.Accept.Visible == true then
+                game:GetService'VirtualUser':Button1Down(Vector2.new(0.9,0.9))
+                game:GetService'VirtualUser':Button1Up(Vector2.new(0.9,0.9))
+                wait(.1)
+                for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+                    if v.Name == "Dialogue" then
+                        v.Accept.Size = UDim2.new(0, 10000, 0, 10000)
+                        v.Accept.Position = UDim2.new(-2, 0, -5, 0)
+                        v.Accept.ImageTransparency = 1
+                    end
+                end
+            end 
+        end	
+    end
+}
+end
+
+
+
+
+if oldworld then
+
+    Tab:Button{
+    	Name = "Town",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2162.0366210938, 48.419300079346, -1770.1558837891)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Pirate Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3576.3947753906, 37.912017822266, -728.75335693359)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Soldier Town",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1796.3740234375, 68.717636108398, 233.60539245605)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Shark Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3642.3298339844, 62.963733673096, 1360.5213623047)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Chef Shipd",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(42.689346313477, 149.29095458984, -31.034660339355)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Snow Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1083.8746337891, 16.455015182495, 1390.0140380859)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Desert Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1329.7894287109, 43.151268005371, 2179.9145507812)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Soldier Town",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1796.3740234375, 68.717636108398, 233.60539245605)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Skyland",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-157.97627258301, 375.29046630859, 4064.1853027344)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Bubbleland",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5705.3061523438, 12.333828926086, 3478.4235839844)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "War Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6480.2827148438, 98.011154174805, 1082.3759765625)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Lobby Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2911.3171386719, 13.047735214233, 4202.8784179688)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Fishland",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2417.2243652344, 40.391082763672, 9322.7265625)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Stone Arena",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9905.3359375, 70.725074768066, -3764.3728027344)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Zombie Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1690.2374267578, 15.855092048645, 6563.9233398438)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Stone Rain Sea",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6122.6137695312, 50.198848724365, -2049.0397949219)
+    	end
+    }
+end
+
+if newworld then
+    Tab:Button{
+    	Name = "Japan Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3612.97900390625, 57.31081008911133, 234.86700439453125)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Skull Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8383.7060546875, 14.361595153808594, 958.5140991210938)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Loaf Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6798.24853515625, 31.380868911743164, 8181.76025390625)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Mirror Room",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(30387.98046875, 24.767993927001953, 93373.9921875)
+    	end
+    }
+    
+    Tab:Button{
+    	Name = "Christmas Island",
+    	Callback = function() 
+    	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9947.7958984375, 32.06310272216797, 5534.775390625)
+    	end
+    }
+end
+
+
+GUI:Credit{
+	Name = "FREE KUB HUB | Credit",
+	Description = "Thank you for use script",
+	Discord = "coming..soon"
+}
+
+
